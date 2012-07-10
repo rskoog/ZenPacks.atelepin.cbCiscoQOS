@@ -1,0 +1,52 @@
+intr = dmd.getObjByPath('/zport/dmd/Devices/Network/Router/Cisco/devices/test1/os/interfaces/GigabitEthernet0_0')
+
+rep = dmd.getObjByPath('/zport/dmd/Reports/cbSPGraphReport')
+################################################################################################
+
+
+################################################################################################
+
+ 
+
+
+dev=find('test7')
+os = dev.os
+intr = os.interfaces()[3]#dmd.getObjByPath('/zport/dmd/Devices/Network/Router/Cisco/devices/test66/os/interfaces/GigabitEthernet0_0')
+sp = intr.cbServicePolicy()[0] #dmd.getObjByPath('/zport/dmd/Devices/Network/Router/Cisco/devices/test60/os/cbServicePolicy/16')
+cm = sp.cbClassMap()[0]
+cm.ifindex
+templ = cm1.getRRDTemplates()[0]
+gdef = templ.getGraphDefs()[0]
+gp = gdef.getGraphPoints()[0]
+
+
+###########################################################################################################################
+
+
+2012-07-07T15:36:19 WARNING Metaconfigure directRouter: name = report_router, 
+                                                        class = <class 'Products.Zuul.routers.report.ReportRouter'>, 
+                                                        namespace = Zenoss.remote, 
+                                                        for = None 
+
+####################################################################################################################33
+
+zope.configuration.config.GroupingContextDecorator
+
+12-07-07T16:30:40 WARNING Metaconfigure directRouter: source Ext.Direct.addProvider(
+              {"url": "report_router", "enableBuffer": 100, "namespace": "Zenoss.remote", 
+               "actions": {"ReportRouter": [{"name": "addNode", "len": 1}, 
+                                            {"name": "deleteNode", "len": 1}, 
+                                            {"name": "getReportTypes", "len": 1}, 
+                                            {"name": "getTree", "len": 1}, 
+                                            {"name": "moveNode", "len": 1}]}, 
+                            "timeout": "30000", 
+                            "type": "remoting", 
+                            "id": "ReportRouter"});
+
+
+################################################################################################################################
+
+WARNING ServicePolicy gconf = {'PostPolicyDropRate': {'idxOffset': 4, 'cmds': ['-F', '-E', '--height=100', '--width=750', '--vertical-label= ', 'DEF:MPLS-BestEffort_cbQosCMDropBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BestEffort/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:AVERAGE', 'DEF:MPLS-BestEffort_cbQosCMDropBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BestEffort/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:MAX', 'CDEF:MPLS-BestEffort_cbQosCMDropBitRate=MPLS-BestEffort_cbQosCMDropBitRate-raw', 'LINE1:MPLS-BestEffort_cbQosCMDropBitRate-raw#00cc00ff:MPLS-BestEffort', 'GPRINT:MPLS-BestEffort_cbQosCMDropBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:MPLS-BestEffort_cbQosCMDropBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:MPLS-BestEffort_cbQosCMDropBitRate-raw-max:MAX:max\\:%5.2lf%s\\j', 'DEF:MPLS-BusinessCritical_cbQosCMDropBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BusinessCritical/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:AVERAGE', 'DEF:MPLS-BusinessCritical_cbQosCMDropBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BusinessCritical/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:MAX', 'CDEF:MPLS-BusinessCritical_cbQosCMDropBitRate=MPLS-BusinessCritical_cbQosCMDropBitRate-raw', 'LINE1:MPLS-BusinessCritical_cbQosCMDropBitRate-raw#0000ff99:MPLS-BusinessCritical', 'GPRINT:MPLS-BusinessCritical_cbQosCMDropBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:MPLS-BusinessCritical_cbQosCMDropBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:MPLS-BusinessCritical_cbQosCMDropBitRate-raw-max:MAX:max\\:%5.2lf%s\\j', 'DEF:MPLS-RealTime_cbQosCMDropBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-RealTime/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:AVERAGE', 'DEF:MPLS-RealTime_cbQosCMDropBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-RealTime/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:MAX', 'CDEF:MPLS-RealTime_cbQosCMDropBitRate=MPLS-RealTime_cbQosCMDropBitRate-raw', 'LINE1:MPLS-RealTime_cbQosCMDropBitRate-raw#00ffff99:MPLS-RealTime ', 'GPRINT:MPLS-RealTime_cbQosCMDropBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:MPLS-RealTime_cbQosCMDropBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:MPLS-RealTime_cbQosCMDropBitRate-raw-max:MAX:max\\:%5.2lf%s\\j', 'DEF:class-default_cbQosCMDropBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/class-default/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:AVERAGE', 'DEF:class-default_cbQosCMDropBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/class-default/cbQosCMDropBitRate_cbQosCMDropBitRate.rrd:ds0:MAX', 'CDEF:class-default_cbQosCMDropBitRate=class-default_cbQosCMDropBitRate-raw', 'LINE1:class-default_cbQosCMDropBitRate-raw#ff000099:class-default ', 'GPRINT:class-default_cbQosCMDropBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:class-default_cbQosCMDropBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:class-default_cbQosCMDropBitRate-raw-max:MAX:max\\:%5.2lf%s\\j']}, 'PostPolicyBitRate': {'idxOffset': 4, 'cmds': ['-F', '-E', '--height=100', '--width=750', '--vertical-label= ', 'DEF:MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BestEffort/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:AVERAGE', 'DEF:MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BestEffort/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:MAX', 'CDEF:MPLS-BestEffort_cbQosCMPostPolicyBitRate=MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw', 'LINE1:MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw#00cc00ff:MPLS-BestEffort', 'GPRINT:MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:MPLS-BestEffort_cbQosCMPostPolicyBitRate-raw-max:MAX:max\\:%5.2lf%s\\j', 'DEF:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BusinessCritical/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:AVERAGE', 'DEF:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-BusinessCritical/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:MAX', 'CDEF:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate=MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw', 'LINE1:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw#0000ff99:MPLS-BusinessCritical', 'GPRINT:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:MPLS-BusinessCritical_cbQosCMPostPolicyBitRate-raw-max:MAX:max\\:%5.2lf%s\\j', 'DEF:MPLS-RealTime_cbQosCMPostPolicyBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-RealTime/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:AVERAGE', 'DEF:MPLS-RealTime_cbQosCMPostPolicyBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/MPLS-RealTime/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:MAX', 'CDEF:MPLS-RealTime_cbQosCMPostPolicyBitRate=MPLS-RealTime_cbQosCMPostPolicyBitRate-raw', 'LINE1:MPLS-RealTime_cbQosCMPostPolicyBitRate-raw#00ffff99:MPLS-RealTime ', 'GPRINT:MPLS-RealTime_cbQosCMPostPolicyBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:MPLS-RealTime_cbQosCMPostPolicyBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:MPLS-RealTime_cbQosCMPostPolicyBitRate-raw-max:MAX:max\\:%5.2lf%s\\j', 'DEF:class-default_cbQosCMPostPolicyBitRate-raw=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/class-default/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:AVERAGE', 'DEF:class-default_cbQosCMPostPolicyBitRate-raw-max=/usr/local/zenoss/perf/Devices/MPLS-PE-Ustkam4/os/interfaces/Multilink2/cbServicePolicy/set-MPLS-QOS-Astana_output/cbClassMap/class-default/cbQosCMPostPolicyBitRate_cbQosCMPostPolicyBitRate.rrd:ds0:MAX', 'CDEF:class-default_cbQosCMPostPolicyBitRate=class-default_cbQosCMPostPolicyBitRate-raw', 'LINE1:class-default_cbQosCMPostPolicyBitRate-raw#ff000099:class-default ', 'GPRINT:class-default_cbQosCMPostPolicyBitRate-raw:LAST:cur\\:%5.2lf%s', 'GPRINT:class-default_cbQosCMPostPolicyBitRate-raw:AVERAGE:avg\\:%5.2lf%s', 'GPRINT:class-default_cbQosCMPostPolicyBitRate-raw-max:MAX:max\\:%5.2lf%s\\j']}}
+
+
+######################################################################################################################
