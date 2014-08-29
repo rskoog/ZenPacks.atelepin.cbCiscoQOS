@@ -27,9 +27,9 @@
                  permission="zope2.Public"
                  />
          
-
+<!--
         <adapter
-                 for=".reports.ServicePolicyReport.ServicePolicyReport"
+                 for=".reports.cbSPReport"
                  provides="Products.ZenUI3.browser.interfaces.INewPath"
                  factory="Products.ZenUI3.browser.backcompat.CustomReport"
                  />

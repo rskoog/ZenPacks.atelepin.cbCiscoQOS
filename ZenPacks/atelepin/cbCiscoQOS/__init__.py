@@ -13,7 +13,7 @@ from Products.ZenModel.ZenPack import ZenPackBase
 from Products.ZenModel.OperatingSystem import OperatingSystem
 from Products.ZenModel.IpInterface import IpInterface
 from Products.ZenRelations.RelSchema import *
-from ServicePolicyReportClass import ServicePolicyReportClass
+from cbSPReportClass import cbSPReportClass
 
 IpInterface._relations += (("cbServicePolicy", ToManyCont(ToOne, "ZenPacks.atelepin.cbCiscoQOS.cbServicePolicy", "interface")), )
 
